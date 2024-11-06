@@ -1,21 +1,11 @@
-"use client";
-import { useState } from "react";
-
-export default function Header({fetchPictures, loading}) {
-
-    return (
-      <header>
-        <h1>My Midterm Project</h1>
-        <button
-          className="border-2 border-white p-2"
-          onClick={fetchPictures}
-          disabled={loading}
-        >
-          Fetch Stuff
-        </button>
-      </header>
-    );
-  };
-
-
-
+// Header.js
+export default function Header({ fetchPictures, buttonText }) {
+  return (
+    <header>
+      <h1>Cat Image Gallery</h1>
+      <button onClick={fetchPictures} disabled={buttonText === "Loading..."}>
+        {buttonText}
+      </button>
+    </header>
+  );
+}

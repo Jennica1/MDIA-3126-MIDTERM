@@ -10,7 +10,7 @@ export default function PictureDisplay({ pictureContent, loading }) {
     }
   
     return (
-      <section className='body'>
+      <section >
         {pictureContent.map((picture, i) => {
           return (
             <article key={i}>
@@ -33,7 +33,7 @@ export default function PictureDisplay({ pictureContent, loading }) {
                     </div>
                   );
                 } else {
-                  return <p>No breed information available</p>;
+                  return <h2>No breed information available</h2>;
                 }
               })()}
   
