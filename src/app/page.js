@@ -2,7 +2,8 @@
 "use client";
 import { useState } from "react";
 import Header from "./header";
-import PictureDisplay from "@/pictureDisplay";
+import PictureDisplay from "./pictureDisplay";
+import './styles.css'; 
 
 export default function Home() {
   const [pictureContent, setPictureContent] = useState(null);

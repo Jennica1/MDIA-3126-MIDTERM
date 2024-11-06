@@ -1,3 +1,5 @@
+import './styles.css';
+
 export default function PictureDisplay({ pictureContent, loading }) {
     if (loading) {
       return <section>Loading...</section>;
@@ -8,7 +10,7 @@ export default function PictureDisplay({ pictureContent, loading }) {
     }
   
     return (
-      <section>
+      <section className='body'>
         {pictureContent.map((picture, i) => {
           return (
             <article key={i}>
@@ -20,7 +22,7 @@ export default function PictureDisplay({ pictureContent, loading }) {
                 if (picture.breeds && picture.breeds.length > 0) {
                   return (
                     <div>
-                         {/* mapping through the breeds data */}
+                    {/* mapping through the breeds data */}
                       {picture.breeds.map((breed, index) => (
                         <div key={index}>
                           <h2>{breed.name}</h2>
